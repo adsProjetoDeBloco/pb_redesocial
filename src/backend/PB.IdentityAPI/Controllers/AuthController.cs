@@ -2,6 +2,7 @@ using PB.IdentityAPI.Service;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using static PB.IdentityAPI.Models.UserViewModels;
+using Microsoft.EntityFrameworkCore;
 
 namespace PB.IdentityAPI.Controllers
 {
@@ -56,6 +57,23 @@ namespace PB.IdentityAPI.Controllers
             return BadRequest();
 
         }
+
+        [HttpPost("reset-password-token")]
+        public async Task<ActionResult> ResetPasswordRequestAsync(UserResetPasswordToken resetToken)
+        {
+            var identityUser = await _singInManager.UserManager.Users.FirstOrDefaultAsync(u => u.NormalizedEmail == resetToken.Email.ToUpper());
+
+            if (identityUser != null)
+            {
+                string resetCodeToken = await _singInManager.UserManager.GeneratePasswordResetTokenAsync(identityUser);
+
+                return Ok(resetCodeToken);
+            }
+            return BadRequest();
+
+        }
+
+       
 
         private async Task<UserResponseLogin> GenerateJwt(string email)
         {
