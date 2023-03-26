@@ -3,15 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PB.Domain", "src\backend\PB.Domain\PB.Domain.csproj", "{3DE6CBB6-1AEB-4715-9E6E-90EC2DE8BB5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PB.Domain", "src\backend\PB.Domain\PB.Domain.csproj", "{3DE6CBB6-1AEB-4715-9E6E-90EC2DE8BB5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PB.Application", "src\backend\PB.Application\PB.Application.csproj", "{FB3F1B8A-3B9E-4F26-9D0B-63924D499F3A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PB.Data", "src\backend\PB.Data\PB.Data.csproj", "{21D72005-45EE-4574-A478-FECE120932BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PB.Data", "src\backend\PB.Data\PB.Data.csproj", "{21D72005-45EE-4574-A478-FECE120932BC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PB.IdentityAPI", "src\backend\PB.IdentityAPI\PB.IdentityAPI.csproj", "{9770B72A-603C-49E6-9D5A-EA0151119A09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PB.IdentityAPI", "src\backend\PB.IdentityAPI\PB.IdentityAPI.csproj", "{9770B72A-603C-49E6-9D5A-EA0151119A09}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "src\frotend\Web\Web.csproj", "{D8681EB7-B4F4-455A-935A-461BC002A1D6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "src\frotend\Web\Web.csproj", "{D8681EB7-B4F4-455A-935A-461BC002A1D6}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{19060507-205D-4792-827F-BD98EF563010}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SocialMediaAPI", "src\backend\SocialMediaAPI\SocialMediaAPI.csproj", "{C9289F3D-DF3F-4D5F-954F-06855EB298C7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +28,6 @@ Global
 		{3DE6CBB6-1AEB-4715-9E6E-90EC2DE8BB5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DE6CBB6-1AEB-4715-9E6E-90EC2DE8BB5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DE6CBB6-1AEB-4715-9E6E-90EC2DE8BB5C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FB3F1B8A-3B9E-4F26-9D0B-63924D499F3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FB3F1B8A-3B9E-4F26-9D0B-63924D499F3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FB3F1B8A-3B9E-4F26-9D0B-63924D499F3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FB3F1B8A-3B9E-4F26-9D0B-63924D499F3A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{21D72005-45EE-4574-A478-FECE120932BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{21D72005-45EE-4574-A478-FECE120932BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21D72005-45EE-4574-A478-FECE120932BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +40,10 @@ Global
 		{D8681EB7-B4F4-455A-935A-461BC002A1D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8681EB7-B4F4-455A-935A-461BC002A1D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D8681EB7-B4F4-455A-935A-461BC002A1D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9289F3D-DF3F-4D5F-954F-06855EB298C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9289F3D-DF3F-4D5F-954F-06855EB298C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9289F3D-DF3F-4D5F-954F-06855EB298C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9289F3D-DF3F-4D5F-954F-06855EB298C7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
