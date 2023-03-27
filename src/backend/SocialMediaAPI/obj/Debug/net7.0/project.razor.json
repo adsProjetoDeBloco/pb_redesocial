@@ -1,6 +1,6 @@
 {
-  "SerializedFilePath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.IdentityAPI\\obj\\Debug\\net7.0\\project.razor.json",
-  "FilePath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.IdentityAPI\\PB.IdentityAPI.csproj",
+  "SerializedFilePath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\SocialMediaAPI\\obj\\Debug\\net7.0\\project.razor.json",
+  "FilePath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\SocialMediaAPI\\SocialMediaAPI.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "7.0",
@@ -18642,7 +18642,7 @@
     ],
     "CSharpLanguageVersion": 1100
   },
-  "RootNamespace": "PB.IdentityAPI",
+  "RootNamespace": "SocialMediaAPI",
   "Documents": [],
   "SerializationFormat": "0.3"
 }

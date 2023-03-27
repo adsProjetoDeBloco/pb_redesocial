@@ -1,8 +1,8 @@
-#REDESOCIAL API
+# REDESOCIAL API
 
-##Relações de dados
+## Relações de dados
 
-###Entidades:
+### Entidades:
 
 1 - User:
 * Id

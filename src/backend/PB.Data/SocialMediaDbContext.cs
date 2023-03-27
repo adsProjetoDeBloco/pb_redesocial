@@ -10,5 +10,6 @@ namespace PB.Data
         
         }
         public DbSet<Game> Games { get; set; }
+        public DbSet<Post> Posts { get; set; }
     }
 }
