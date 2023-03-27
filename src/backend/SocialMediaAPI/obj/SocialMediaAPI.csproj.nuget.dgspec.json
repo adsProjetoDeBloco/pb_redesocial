@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\SocialMediaAPI\\SocialMediaAPI.csproj": {}
+    "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\SocialMediaAPI\\SocialMediaAPI.csproj": {}
   },
   "projects": {
-    "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Data\\PB.Data.csproj": {
+    "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Data\\PB.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Data\\PB.Data.csproj",
+        "projectUniqueName": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Data\\PB.Data.csproj",
         "projectName": "PB.Data",
-        "projectPath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Data\\PB.Data.csproj",
+        "projectPath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Data\\PB.Data.csproj",
         "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-        "outputPath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Data\\obj\\",
+        "outputPath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,8 +28,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\PB.Domain.csproj": {
-                "projectPath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\PB.Domain.csproj"
+              "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\PB.Domain.csproj": {
+                "projectPath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\PB.Domain.csproj"
               }
             }
           }
@@ -101,14 +101,14 @@
         }
       }
     },
-    "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\PB.Domain.csproj": {
+    "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\PB.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\PB.Domain.csproj",
+        "projectUniqueName": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\PB.Domain.csproj",
         "projectName": "PB.Domain",
-        "projectPath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\PB.Domain.csproj",
+        "projectPath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\PB.Domain.csproj",
         "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-        "outputPath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\obj\\",
+        "outputPath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -156,14 +156,14 @@
         }
       }
     },
-    "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\SocialMediaAPI\\SocialMediaAPI.csproj": {
+    "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\SocialMediaAPI\\SocialMediaAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\SocialMediaAPI\\SocialMediaAPI.csproj",
+        "projectUniqueName": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\SocialMediaAPI\\SocialMediaAPI.csproj",
         "projectName": "SocialMediaAPI",
-        "projectPath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\SocialMediaAPI\\SocialMediaAPI.csproj",
+        "projectPath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\SocialMediaAPI\\SocialMediaAPI.csproj",
         "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-        "outputPath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\SocialMediaAPI\\obj\\",
+        "outputPath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\SocialMediaAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -180,11 +180,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Data\\PB.Data.csproj": {
-                "projectPath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Data\\PB.Data.csproj"
+              "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Data\\PB.Data.csproj": {
+                "projectPath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Data\\PB.Data.csproj"
               },
-              "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\PB.Domain.csproj": {
-                "projectPath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\PB.Domain.csproj"
+              "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\PB.Domain.csproj": {
+                "projectPath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\PB.Domain.csproj"
               }
             }
           }

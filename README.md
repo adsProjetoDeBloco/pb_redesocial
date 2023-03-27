@@ -1,6 +1,6 @@
 # REDESOCIAL API
 
-## Relações de dados
+## Relaï¿½ï¿½es de dados
 
 ### Entidades:
 
@@ -20,15 +20,15 @@
 3 - Group:
 * Id
 * Nome do Grupo
-* Descrição
+* Descriï¿½ï¿½o
 * Membro
-* Data da Criação
+* Data da Criaï¿½ï¿½o
 
 4 - Game:
-*Id
-*Nome do Jogo
-*Categoria
-*Descrição
+* Id
+* Nome do Jogo
+* Categoria
+* Descriï¿½ï¿½o
 
 5 - Post:
 * Id

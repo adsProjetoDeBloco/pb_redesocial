@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zXThUZ0jsxQzADTd7j04zNwuPcw2XGTWSriFOAxZ+lc021H/uW4iQ+w5UyGmkakd9qlUXZgQS3hfUhMJdUzccw==",
+  "dgSpecHash": "glRwzWuF3jLrJjqhEoajmgrvwlTEOFxeWb2R7WOLRCD810Fu1uVNZKgOj/L6TEd0lIgjDoHc/1TVSxcWSGxJ9Q==",
   "success": true,
-  "projectFilePath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\PB.Domain.csproj",
+  "projectFilePath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Domain\\PB.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
