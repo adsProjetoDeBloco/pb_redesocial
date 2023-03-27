@@ -20,6 +20,9 @@ namespace PB.Data.Service
 
         public async Task CreateGameAsync(Game game)
         {
+            if(game == null){
+                throw new Exception("O objeto é nulo, confira se foi preenchido corretamente.");
+            }
             await _context.Games.AddAsync(game);
             await _context.SaveChangesAsync();
         }
@@ -48,12 +51,12 @@ namespace PB.Data.Service
         }
         public async Task DeleteGameAsync(int gameId)
         {
-            if (gameId == null) 
-            {
-                throw new Exception("Id não existe");
-            }
+            
             var deletedGame = await _context.Games.FirstOrDefaultAsync(g => g.Id == gameId);
-
+            if (deletedGame == null) 
+            {
+                throw new Exception($"{gameId} não existe");
+            }
             _context.Games.Remove(deletedGame);
             await _context.SaveChangesAsync();
 

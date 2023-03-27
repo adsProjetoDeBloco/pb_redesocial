@@ -15,5 +15,7 @@ namespace PB.Domain.Entities
         public ICollection<Game> Games { get; set; }
         public ICollection<Follower> Followers { get; set; } //1 usuario tem N seguidores
         public ICollection<Group> Grupos { get; set; } //1 Usuario possui N grupos
+        public ICollection<Post> Posts {get; set;}
+        public ICollection<Comment> Comments { get; set; }
     }
 }

@@ -33,13 +33,22 @@ namespace PB.Data.Service
             return readDto;
         }
 
-        public Task<ReadPostDto> GetPostById(int gameId)
+        public async Task<ReadPostDto> GetPostById(int postId)
         {
-            throw new NotImplementedException();
+            var post = await _context.Posts.FirstOrDefaultAsync(p => p.Id == postId);
+            var readDto = _mapper.Map<ReadPostDto>(post);
+
+            return readDto;
         }
-        public Task DeletePostAsync(int postId)
+        public async Task DeletePostAsync(int postId)
         {
-            throw new NotImplementedException();
+            var deletedPost = await _context.Posts.FirstOrDefaultAsync(p => p.Id == postId);
+            if (deletedPost == null)
+            {
+                throw new Exception($"{postId} não existe");
+            }
+            _context.Posts.Remove(deletedPost);
+            await _context.SaveChangesAsync();
         }
     }
 }
