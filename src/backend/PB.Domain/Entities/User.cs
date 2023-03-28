@@ -12,11 +12,11 @@ namespace PB.Domain.Entities
         public string Name { get; set; }
         public string? Email { get; set; }
         public string? Bio { get; set; }
-        public virtual ICollection<UserGame>? Games { get; set; } //Relação OK
-        public virtual ICollection<UserFollowers>? Followers { get; set; } //
-        public virtual ICollection<UserGroup>? Groups { get; set; } //Relação OK
-        public virtual ICollection<Post>? Posts {get; set;} // Relação Ok
-        public virtual ICollection<Comment>? Comments { get; set; } // Relação Ok
+        public virtual ICollection<UserGame>? Games { get; set; }
+        public virtual ICollection<UserFollowers>? Followers { get; set; } 
+        public virtual ICollection<UserGroup>? Groups { get; set; } 
+        public virtual ICollection<Post>? Posts {get; set;}
+        public virtual ICollection<Comment>? Comments { get; set; } 
         public byte[]? Avatar { get; set; }
     }
 }
