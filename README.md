@@ -42,3 +42,9 @@
 * Mensagen
 * Nome do usuario que publicou
 * data da postagem
+
+---
+
+## Relações concluidas:
+
+Todos os dados foram relacionados.

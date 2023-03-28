@@ -4365,11 +4365,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.IdentityAPI\\PB.IdentityAPI.csproj",
+      "projectUniqueName": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.IdentityAPI\\PB.IdentityAPI.csproj",
       "projectName": "PB.IdentityAPI",
-      "projectPath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.IdentityAPI\\PB.IdentityAPI.csproj",
+      "projectPath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.IdentityAPI\\PB.IdentityAPI.csproj",
       "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-      "outputPath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.IdentityAPI\\obj\\",
+      "outputPath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.IdentityAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
