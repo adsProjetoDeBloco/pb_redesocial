@@ -13,11 +13,14 @@ namespace PB.Data.InversionOfControll
         public static void Inject(IServiceCollection services, ConfigurationManager configuration)
         {
             //DbContext
-            services.AddDbContext<SocialMediaDbContext>(opt => opt.UseSqlServer(configuration.GetConnectionString("DbConnectionString")));
+            services.AddDbContext<SocialMediaDbContext>(opt => 
+                opt.UseLazyLoadingProxies().UseSqlServer(configuration.GetConnectionString("DbConnectionString")));
 
             //Interfaces Injections
-           
             services.AddScoped<IGameService, GameService>();
+            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<ICommentService, CommentService>();
+            services.AddScoped<IPostService, PostService>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
