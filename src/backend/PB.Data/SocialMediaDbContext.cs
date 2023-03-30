@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PB.Domain.Entities;
-using System.Reflection.Emit;
 
 
 namespace PB.Data
@@ -14,7 +13,6 @@ namespace PB.Data
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-
             //Relação de N para N Grupo e Usuario
             builder.Entity<UserGroup>()
                 .HasKey(uG => new {uG.UserId, uG.GroupId});
@@ -47,12 +45,11 @@ namespace PB.Data
 
             
             //Relação de N para N Usuario e Seguidores
-            builder.Entity<UserFollowers>()
-                .HasKey(uG => new {uG.UserId, uG.FollowerId});
+           
 
-            builder.Entity<UserFollowers>()
-                .HasOne(u => u.User)
-                .WithMany(g => g.Followers)
+            builder.Entity<User>()
+                .HasMany(u => u.Followers)
+                .WithOne(g => g.User)
                 .HasForeignKey(f => f.UserId);
 
             builder.Entity<UserFollowers>()
@@ -69,11 +66,10 @@ namespace PB.Data
                 .OnDelete(DeleteBehavior.Restrict);
 
             //comentario tem um post e um post tem N comentarios
-            builder.Entity<Comment>()
-                .HasOne(u => u.Post)
-                .WithMany(c => c.Comments)
-                .HasForeignKey(f => f.PostId)
-                .OnDelete(DeleteBehavior.Restrict);
+            builder.Entity<Post>()
+                .HasMany(c => c.Comments)
+                .WithOne(p => p.Post)
+                .HasForeignKey(f => f.PostId);
 
 
 
@@ -82,13 +78,6 @@ namespace PB.Data
                 .HasOne(u => u.User)
                 .WithMany(p => p.Posts)
                 .HasForeignKey(p => p.UserId);
-
-            
-            
-            
-            
-                
-
 
         }
         public DbSet<Game> Games { get; set; }

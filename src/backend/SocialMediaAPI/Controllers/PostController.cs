@@ -1,18 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
-using PB.Domain.Dto.PostDto;
-using PB.Domain.Interfaces;
+﻿using Microsoft.AspNetCore.Mvc;
+using PB.Application.Dto.PostDto;
+using PB.Application.Service.Interfaces;
 
 namespace SocialMediaAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class PostController : Controller
+    public class PostController : ControllerBase
     {
         private readonly IPostService _postService;
 
@@ -54,13 +48,14 @@ namespace SocialMediaAPI.Controllers
             return Ok(posts);
         }
 
-        [HttpPost("delete-post/{id}")]
-        public async Task<IActionResult> DeletePost(int Id)
+        [HttpDelete("delete-post/{id}")]
+        public async Task<IActionResult> DeletePost(int id)
         {
 
-            await _postService.DeletePostAsync(Id);
+            await _postService.DeletePostAsync(id);
 
             return NoContent();
         }
     }
 }
+

@@ -14,6 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PB.Application\PB.Application.csproj" />
     <ProjectReference Include="..\PB.Data\PB.Data.csproj" />
     <ProjectReference Include="..\PB.Domain\PB.Domain.csproj" />
   </ItemGroup>

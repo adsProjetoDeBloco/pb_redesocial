@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using PB.Domain.Dto.CommentDto;
-using PB.Domain.Interfaces;
+using PB.Application.Dto.CommentDto;
+using PB.Application.Service.Interfaces;
 
 namespace SocialMediaAPI.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class CommentController : ControllerBase
     {
         private readonly ICommentService _commentService;
@@ -20,14 +20,15 @@ namespace SocialMediaAPI.Controllers
         }
 
         [HttpPost("creat-comment")]
-        public async Task<IActionResult> CreatComment(CreatCommentDto creatDto)
+        public async Task<IActionResult> CreatComment(CreateCommentDto creatDto)
         {
 
             await _commentService.CreateCommentAsync(creatDto);
 
-            return CreatedAtAction(nameof(GetCommentById), new { creatDto.Id }, creatDto);
+            return CreatedAtAction(nameof(GetCommentById), new { commentId = creatDto.Id }, creatDto);
         }
-        [HttpGet("get-comment-by-id/{id}")]
+
+        [HttpGet("get-comment-by-id/{commentId}")]
         public async Task<IActionResult> GetCommentById(int commentId)
         {
 
@@ -40,7 +41,7 @@ namespace SocialMediaAPI.Controllers
 
             return Ok(comment);
         }
-         [HttpPatch("updateComment/{id}")]
+         [HttpPatch("updateComment")]
         public async Task<IActionResult> UpdateGameAsync(UpdateCommentDto updateDto)
         {
             await _commentService.UpdateCommentAsync(updateDto);
@@ -49,10 +50,10 @@ namespace SocialMediaAPI.Controllers
         }
         
 
-        [HttpPost("delete-post/{id}")]
-        public async Task<IActionResult> DeletePost(int Id)
+        [HttpDelete("delete-post/{commentId}")]
+        public async Task<IActionResult> DeletePost(int commentId)
         {
-            await _commentService.DeleteCommentAsync(Id);
+            await _commentService.DeleteCommentAsync(commentId);
 
             return NoContent();
         }

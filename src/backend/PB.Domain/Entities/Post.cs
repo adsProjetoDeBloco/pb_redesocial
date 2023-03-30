@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
+using System.Text.Json.Serialization;
 using System.Threading.Tasks;
 
 namespace PB.Domain.Entities
@@ -14,6 +15,7 @@ namespace PB.Domain.Entities
         public string? Title { get; set; }
         public string? PostText { get; set; }
         public int UserId { get; set; }
+        [JsonIgnore]
         public virtual User? User { get; set; }
         public virtual ICollection<Comment>? Comments { get; set; }
         public DateTime CreatedAt { get; set; }
