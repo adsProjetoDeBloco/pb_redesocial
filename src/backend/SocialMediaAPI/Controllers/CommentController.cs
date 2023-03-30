@@ -22,7 +22,6 @@ namespace SocialMediaAPI.Controllers
         [HttpPost("creat-comment")]
         public async Task<IActionResult> CreatComment(CreateCommentDto creatDto)
         {
-
             await _commentService.CreateCommentAsync(creatDto);
 
             return CreatedAtAction(nameof(GetCommentById), new { commentId = creatDto.Id }, creatDto);
@@ -31,7 +30,6 @@ namespace SocialMediaAPI.Controllers
         [HttpGet("get-comment-by-id/{commentId}")]
         public async Task<IActionResult> GetCommentById(int commentId)
         {
-
             var comment = await _commentService.GetCommentById(commentId);
 
             if (comment == null)
@@ -41,14 +39,14 @@ namespace SocialMediaAPI.Controllers
 
             return Ok(comment);
         }
-         [HttpPatch("updateComment")]
+
+        [HttpPatch("updateComment")]
         public async Task<IActionResult> UpdateGameAsync(UpdateCommentDto updateDto)
         {
             await _commentService.UpdateCommentAsync(updateDto);
-            
+
             return Ok(updateDto);
         }
-        
 
         [HttpDelete("delete-post/{commentId}")]
         public async Task<IActionResult> DeletePost(int commentId)

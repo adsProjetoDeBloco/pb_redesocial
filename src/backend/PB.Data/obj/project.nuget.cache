@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "47NkZvUB0d3PmsrYv6503LFfO3ec5s/6PATVNkIo40F4YL1DUGyvq7c/rj0pTE2n5E4wFsCdkH46RRmSV7ujPg==",
+  "dgSpecHash": "gq3KVpE1MbYb994XhIUw4fHPwgqM1C2LuiwTNh0w5I9OCwfFjN3jYs/+8AAGtr1cyeR9rnxus8xFfImJfKY11w==",
   "success": true,
-  "projectFilePath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Data\\PB.Data.csproj",
+  "projectFilePath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Data\\PB.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pedro\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

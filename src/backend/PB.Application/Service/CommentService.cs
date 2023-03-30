@@ -21,7 +21,6 @@ namespace PB.Application.Service
 
         public async Task CreateCommentAsync(CreateCommentDto createDto)
         {
-
             var comment = _mapper.Map<Comment>(createDto);
 
             await _context.Comments.AddAsync(comment);

@@ -17,6 +17,7 @@ namespace PB.Application.Dto.UserDto
         public string? Bio { get; set; }
         public virtual ICollection<UserGame>? Games { get; set; }
         public virtual ICollection<UserFollowers>? Followers { get; set; }
+        public virtual ICollection<UserFollowers>? Following { get; set; }
         [JsonIgnore]
         public virtual ICollection<UserGroup>? Groups { get; set; }
         public virtual ICollection<Post>? Posts { get; set; }

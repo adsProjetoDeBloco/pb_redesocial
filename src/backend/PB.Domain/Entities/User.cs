@@ -13,7 +13,8 @@ namespace PB.Domain.Entities
         public string? Email { get; set; }
         public string? Bio { get; set; }
         public virtual ICollection<UserGame>? Games { get; set; }
-        public virtual ICollection<UserFollowers>? Followers { get; set; } 
+        public virtual ICollection<UserFollowers>? Followers { get; set; }
+        public virtual ICollection<UserFollowers>? Following { get; set; }
         public virtual ICollection<UserGroup>? Groups { get; set; } 
         public virtual ICollection<Post>? Posts {get; set;}
         public virtual ICollection<Comment>? Comments { get; set; } 

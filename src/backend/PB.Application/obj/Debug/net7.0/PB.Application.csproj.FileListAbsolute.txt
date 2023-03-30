@@ -1,7 +1,9 @@
 D:\Programming\INFNET\DOTNET\PB_RedeSocial\pb_redesocial_jogos\src\backend\PB.Application\bin\Debug\net7.0\PB.Application.deps.json
 D:\Programming\INFNET\DOTNET\PB_RedeSocial\pb_redesocial_jogos\src\backend\PB.Application\bin\Debug\net7.0\PB.Application.dll
 D:\Programming\INFNET\DOTNET\PB_RedeSocial\pb_redesocial_jogos\src\backend\PB.Application\bin\Debug\net7.0\PB.Application.pdb
+D:\Programming\INFNET\DOTNET\PB_RedeSocial\pb_redesocial_jogos\src\backend\PB.Application\bin\Debug\net7.0\PB.Data.dll
 D:\Programming\INFNET\DOTNET\PB_RedeSocial\pb_redesocial_jogos\src\backend\PB.Application\bin\Debug\net7.0\PB.Domain.dll
+D:\Programming\INFNET\DOTNET\PB_RedeSocial\pb_redesocial_jogos\src\backend\PB.Application\bin\Debug\net7.0\PB.Data.pdb
 D:\Programming\INFNET\DOTNET\PB_RedeSocial\pb_redesocial_jogos\src\backend\PB.Application\bin\Debug\net7.0\PB.Domain.pdb
 D:\Programming\INFNET\DOTNET\PB_RedeSocial\pb_redesocial_jogos\src\backend\PB.Application\obj\Debug\net7.0\PB.Application.csproj.AssemblyReference.cache
 D:\Programming\INFNET\DOTNET\PB_RedeSocial\pb_redesocial_jogos\src\backend\PB.Application\obj\Debug\net7.0\PB.Application.GeneratedMSBuildEditorConfig.editorconfig
@@ -14,6 +16,4 @@ D:\Programming\INFNET\DOTNET\PB_RedeSocial\pb_redesocial_jogos\src\backend\PB.Ap
 D:\Programming\INFNET\DOTNET\PB_RedeSocial\pb_redesocial_jogos\src\backend\PB.Application\obj\Debug\net7.0\PB.Application.pdb
 D:\Programming\INFNET\DOTNET\PB_RedeSocial\pb_redesocial_jogos\src\backend\PB.Application\obj\Debug\net7.0\ref\PB.Application.dll
 D:\Programming\INFNET\DOTNET\PB_RedeSocial\pb_redesocial_jogos\src\backend\PB.Application\bin\Debug\net7.0\PB.Application.runtimeconfig.json
-D:\Programming\INFNET\DOTNET\PB_RedeSocial\pb_redesocial_jogos\src\backend\PB.Application\bin\Debug\net7.0\PB.Data.dll
-D:\Programming\INFNET\DOTNET\PB_RedeSocial\pb_redesocial_jogos\src\backend\PB.Application\bin\Debug\net7.0\PB.Data.pdb
 D:\Programming\INFNET\DOTNET\PB_RedeSocial\pb_redesocial_jogos\src\backend\PB.Application\obj\Debug\net7.0\PB.Application.genruntimeconfig.cache

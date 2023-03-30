@@ -12,7 +12,6 @@ namespace PB.Application.Profiles
             CreateMap<Comment, CreateCommentDto>();
             CreateMap<ReadCommentDto, Comment>();
             CreateMap<Comment, ReadCommentDto>();
-        
         }
     }
 }

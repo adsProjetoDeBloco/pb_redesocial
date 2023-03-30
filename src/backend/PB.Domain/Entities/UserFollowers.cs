@@ -9,13 +9,11 @@ namespace PB.Domain.Entities
 {
     public class UserFollowers
     {
-        [Key]
-        public int Id { get; set; }
-        [JsonIgnore]
-        public int UserId { get; set; }
-        [JsonIgnore]
-        public virtual User? User { get; set; }
         public int FollowerId { get; set; }
+        [JsonIgnore]
         public virtual User? Follower { get; set; }
+        public int FollowedUserId { get; set; }
+        [JsonIgnore]
+        public virtual User? FollowedUser { get; set; }
     }
 }

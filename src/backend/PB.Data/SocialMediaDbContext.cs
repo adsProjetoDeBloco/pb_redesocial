@@ -15,7 +15,7 @@ namespace PB.Data
         {
             //Relação de N para N Grupo e Usuario
             builder.Entity<UserGroup>()
-                .HasKey(uG => new {uG.UserId, uG.GroupId});
+                .HasKey(uG => new { uG.UserId, uG.GroupId });
 
             builder.Entity<UserGroup>()
                 .HasOne(u => u.User)
@@ -30,7 +30,7 @@ namespace PB.Data
 
             //Relação de N para N Usuario e Jogos
             builder.Entity<UserGame>()
-                .HasKey(uG => new {uG.UserId, uG.GameId});
+                .HasKey(uG => new { uG.UserId, uG.GameId });
 
             builder.Entity<UserGame>()
                 .HasOne(u => u.User)
@@ -43,18 +43,28 @@ namespace PB.Data
                 .HasForeignKey(f => f.GameId);
             //------------------------------------------
 
-            
+
             //Relação de N para N Usuario e Seguidores
 
             builder.Entity<User>()
                 .HasMany(u => u.Followers)
-                .WithOne(g => g.User)
-                .HasForeignKey(f => f.UserId);
+                .WithOne(f => f.FollowedUser)
+                .HasForeignKey(f => f.FollowedUserId);
 
             builder.Entity<UserFollowers>()
-                .HasOne(u => u.User)
-                .WithMany(g => g.Followers)
-                .HasForeignKey(f => f.FollowerId);
+                .HasKey(uf => new { uf.FollowerId, uf.FollowedUserId });
+
+            builder.Entity<UserFollowers>()
+                .HasOne(uf => uf.Follower)
+                .WithMany(u => u.Following)
+                .HasForeignKey(uf => uf.FollowerId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<UserFollowers>()
+                .HasOne(uf => uf.FollowedUser)
+                .WithMany(u => u.Followers)
+                .HasForeignKey(uf => uf.FollowedUserId)
+                .OnDelete(DeleteBehavior.Restrict);
             //------------------------------------------
 
             //Comentario tem um usuario e um usuario tem varios comentarios

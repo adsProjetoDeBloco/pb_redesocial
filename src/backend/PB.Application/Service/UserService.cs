@@ -24,7 +24,7 @@ namespace PB.Application.Service
         }
         public async Task AddFollowerToUser(int followerId, int userId)
         {
-            var follower = new UserFollowers() { UserId = userId, FollowerId = followerId };
+            var follower = new UserFollowers() { FollowedUserId = userId, FollowerId = followerId };
             await _context.UserFollowers.AddAsync(follower);
             await _context.SaveChangesAsync();
         }
