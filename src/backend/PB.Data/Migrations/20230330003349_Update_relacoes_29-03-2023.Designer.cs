@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PB.Data;
 
@@ -11,9 +12,11 @@ using PB.Data;
 namespace PB.Data.Migrations
 {
     [DbContext(typeof(SocialMediaDbContext))]
-    partial class SocialMediaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230330003349_Update_relacoes_29-03-2023")]
+    partial class Update_relacoes_29032023
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,6 +52,19 @@ namespace PB.Data.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("Comments");
+                });
+
+            modelBuilder.Entity("PB.Domain.Entities.Follower", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Followers");
                 });
 
             modelBuilder.Entity("PB.Domain.Entities.Game", b =>
@@ -153,26 +169,15 @@ namespace PB.Data.Migrations
 
             modelBuilder.Entity("PB.Domain.Entities.UserFollowers", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("UserId")
                         .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("FollowerId")
                         .HasColumnType("int");
 
-                    b.Property<int?>("FollowerId1")
-                        .HasColumnType("int");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
+                    b.HasKey("UserId", "FollowerId");
 
                     b.HasIndex("FollowerId");
-
-                    b.HasIndex("FollowerId1");
 
                     b.ToTable("UserFollowers");
                 });
@@ -239,15 +244,17 @@ namespace PB.Data.Migrations
 
             modelBuilder.Entity("PB.Domain.Entities.UserFollowers", b =>
                 {
-                    b.HasOne("PB.Domain.Entities.User", "User")
-                        .WithMany("Followers")
+                    b.HasOne("PB.Domain.Entities.Follower", "Follower")
+                        .WithMany("Users")
                         .HasForeignKey("FollowerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PB.Domain.Entities.User", "Follower")
-                        .WithMany()
-                        .HasForeignKey("FollowerId1");
+                    b.HasOne("PB.Domain.Entities.User", "User")
+                        .WithMany("Followers")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Follower");
 
@@ -290,6 +297,11 @@ namespace PB.Data.Migrations
                     b.Navigation("Group");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("PB.Domain.Entities.Follower", b =>
+                {
+                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("PB.Domain.Entities.Game", b =>

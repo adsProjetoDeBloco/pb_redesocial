@@ -45,7 +45,6 @@ namespace PB.Data
 
             
             //Relação de N para N Usuario e Seguidores
-           
 
             builder.Entity<User>()
                 .HasMany(u => u.Followers)
@@ -53,8 +52,8 @@ namespace PB.Data
                 .HasForeignKey(f => f.UserId);
 
             builder.Entity<UserFollowers>()
-                .HasOne(u => u.Follower)
-                .WithMany(g => g.Users)
+                .HasOne(u => u.User)
+                .WithMany(g => g.Followers)
                 .HasForeignKey(f => f.FollowerId);
             //------------------------------------------
 
@@ -83,7 +82,6 @@ namespace PB.Data
         public DbSet<Game> Games { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Comment> Comments { get; set; }
-        public DbSet<Follower> Followers {get; set;}
         public DbSet<User> Users { get; set; }
         public DbSet<Group> Groups { get; set; }
         public DbSet<UserFollowers> UserFollowers { get; set; }

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using PB.Data;
 
-namespace PB.Application
+namespace PB.Data
 {
     public class DbContextFactory : IDesignTimeDbContextFactory<SocialMediaDbContext>
     {

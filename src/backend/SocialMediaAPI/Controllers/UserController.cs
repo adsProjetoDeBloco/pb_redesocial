@@ -33,7 +33,7 @@ namespace SocialMediaAPI.Controllers
         }
 
         [HttpPost("add-follower")]
-        public async Task<IActionResult> AddFollowerToUser(int followerId, int userId)
+        public async Task<IActionResult> AddFollowerToUser(int userId, int followerId)
         {
             await _userService.AddFollowerToUser(followerId, userId);
 
