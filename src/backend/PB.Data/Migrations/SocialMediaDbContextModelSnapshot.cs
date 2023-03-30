@@ -51,19 +51,6 @@ namespace PB.Data.Migrations
                     b.ToTable("Comments");
                 });
 
-            modelBuilder.Entity("PB.Domain.Entities.Follower", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Followers");
-                });
-
             modelBuilder.Entity("PB.Domain.Entities.Game", b =>
                 {
                     b.Property<int>("Id")
@@ -166,15 +153,26 @@ namespace PB.Data.Migrations
 
             modelBuilder.Entity("PB.Domain.Entities.UserFollowers", b =>
                 {
-                    b.Property<int>("UserId")
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("FollowerId")
                         .HasColumnType("int");
 
-                    b.HasKey("UserId", "FollowerId");
+                    b.Property<int?>("FollowerId1")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("FollowerId");
+
+                    b.HasIndex("FollowerId1");
 
                     b.ToTable("UserFollowers");
                 });
@@ -214,7 +212,7 @@ namespace PB.Data.Migrations
                     b.HasOne("PB.Domain.Entities.Post", "Post")
                         .WithMany("Comments")
                         .HasForeignKey("PostId")
-                        .OnDelete(DeleteBehavior.Restrict)
+                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("PB.Domain.Entities.User", "User")
@@ -241,17 +239,15 @@ namespace PB.Data.Migrations
 
             modelBuilder.Entity("PB.Domain.Entities.UserFollowers", b =>
                 {
-                    b.HasOne("PB.Domain.Entities.Follower", "Follower")
-                        .WithMany("Users")
+                    b.HasOne("PB.Domain.Entities.User", "User")
+                        .WithMany("Followers")
                         .HasForeignKey("FollowerId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("PB.Domain.Entities.User", "User")
-                        .WithMany("Followers")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("PB.Domain.Entities.User", "Follower")
+                        .WithMany()
+                        .HasForeignKey("FollowerId1");
 
                     b.Navigation("Follower");
 
@@ -294,11 +290,6 @@ namespace PB.Data.Migrations
                     b.Navigation("Group");
 
                     b.Navigation("User");
-                });
-
-            modelBuilder.Entity("PB.Domain.Entities.Follower", b =>
-                {
-                    b.Navigation("Users");
                 });
 
             modelBuilder.Entity("PB.Domain.Entities.Game", b =>

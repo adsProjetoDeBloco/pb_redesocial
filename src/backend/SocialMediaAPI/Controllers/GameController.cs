@@ -1,6 +1,6 @@
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using PB.Application.Service.Interfaces;
 using PB.Domain.Entities;
-using PB.Domain.Interfaces;
 
 namespace SocialMediaAPI.Controllers
 {
@@ -38,11 +38,11 @@ namespace SocialMediaAPI.Controllers
             return Ok(selectedGame);
         }
 
-        [HttpPatch("updateGame/{id}")]
+        [HttpPatch("updateGame")]
         public async Task<IActionResult> UpdateGameAsync(Game game)
         {
             await _gameService.UpdateGameAsync(game);
-            
+
             return Ok(game);
         }
 

@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using PB.Application.Service.Interfaces;
 using PB.Domain.Entities;
-using PB.Domain.Interfaces;
 
 namespace SocialMediaAPI.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     public class UserController : ControllerBase
     {
         private readonly IUserService _userService;
@@ -23,8 +23,17 @@ namespace SocialMediaAPI.Controllers
             return Ok(User);
         }
 
+        [HttpPost("add-game-to-user/{gameId}/{userId}")]
+        public async Task<IActionResult> AddGameToUser(int gameId, int userId)
+        {
+
+            await _userService.AddGameToUser(gameId, userId);
+
+            return Ok();
+        }
+
         [HttpPost("add-follower")]
-        public async Task<IActionResult> AddFollowerToUser(int followerId, int userId)
+        public async Task<IActionResult> AddFollowerToUser(int userId, int followerId)
         {
             await _userService.AddFollowerToUser(followerId, userId);
 
