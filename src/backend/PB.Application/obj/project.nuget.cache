@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5esICMdTQcdpSYIz+Pas0wPDK5Z4aFff6SPv1yAga4VAfNwlbLx26dTVA55sPu3ZPtlJJ878Ksqjsxgh1oKpdA==",
+  "dgSpecHash": "bAz7Op7ScrauhQLO+QP/Qv4g+/0MRqNNVA7ho7O/htVZMuCZRjtsQ+bAv8CKVJjYhYrZf6yp8PMebeu+rp+kEg==",
   "success": true,
-  "projectFilePath": "d:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Application\\PB.Application.csproj",
+  "projectFilePath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\pb_redesocial_jogos\\src\\backend\\PB.Application\\PB.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\pedro\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\pedro\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
