@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PB.Data;
 
@@ -11,9 +12,11 @@ using PB.Data;
 namespace PB.Data.Migrations
 {
     [DbContext(typeof(SocialMediaDbContext))]
-    partial class SocialMediaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230331002119_Group_Migration")]
+    partial class Group_Migration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -220,7 +223,7 @@ namespace PB.Data.Migrations
             modelBuilder.Entity("PB.Domain.Entities.Group", b =>
                 {
                     b.HasOne("PB.Domain.Entities.User", "Admin")
-                        .WithMany("GroupAdmin")
+                        .WithMany()
                         .HasForeignKey("AdminId");
 
                     b.Navigation("Admin");
@@ -318,8 +321,6 @@ namespace PB.Data.Migrations
                     b.Navigation("Following");
 
                     b.Navigation("Games");
-
-                    b.Navigation("GroupAdmin");
 
                     b.Navigation("Groups");
 

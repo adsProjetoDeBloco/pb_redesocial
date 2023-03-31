@@ -26,6 +26,13 @@ namespace PB.Data
                 .HasOne(u => u.Group)
                 .WithMany(g => g.Users)
                 .HasForeignKey(f => f.GroupId);
+
+            builder.Entity<Group>()
+                .HasOne(a => a.Admin)
+                .WithMany(gAdmin => gAdmin.GroupAdmin)
+                .HasForeignKey(f => f.AdminId);
+
+
             //------------------------------------------
 
             //Relação de N para N Usuario e Jogos
