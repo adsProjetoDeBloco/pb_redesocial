@@ -60,7 +60,13 @@ namespace PB.Application.Service
             throw new NotImplementedException();
         }
 
+        public async Task<ReadUserDto> GetUserById(int id)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == id);
+            var mapUser = _mapper.Map<ReadUserDto>(user);
 
+            return mapUser;
+        }
     }
 }
 

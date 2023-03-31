@@ -14,8 +14,8 @@ builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("pb_redesocial", new OpenApiInfo
     {
-        Title = "Identity API PB Rede Social",
-        Description = "API de cadastro de usuario para o Projeto de Bloco .NET",
+        Title = "API PB Rede Social",
+        Description = "API De rede social, para acesso ao DB onde ocorre todas as inserções relativas a Rede Social",
         License = new OpenApiLicense() { Name = "MIT", Url = new Uri("https://opensource.org/license/mit/") }
     });
 });

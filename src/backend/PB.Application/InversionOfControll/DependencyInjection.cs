@@ -20,6 +20,7 @@ namespace PB.Application.InversionOfControll
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<IGameService, GameService>();
             services.AddScoped<IPostService, PostService>();
+            services.AddScoped<IGroupService, GroupService>();
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 

@@ -15,11 +15,11 @@ namespace PB.Domain.Entities
         [Key]
         public int Id { get; set; }
         public string? Message { get; set; }
-        public int UserId { get; set; }
+        public int? UserId { get; set; }
         [JsonIgnore]
         public virtual User? User { get; set; }
         public DateTime PostedAt { get; set; }
-        public int PostId { get; set; }
+        public int? PostId { get; set; }
         [JsonIgnore]
         public virtual Post? Post { get; set; }
     }
