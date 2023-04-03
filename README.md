@@ -34,7 +34,7 @@ https://pbidentityapigerenciamento.azure-api.net/Auth/reset-password-token
 Isto ira nós retornar StatusCode 200 com a string que será o Token, apos pegar esse token você vai passar ele você deve realizar uma nova requisição passando email, senha nova, confirmação e o token de reset:
 https://pbidentityapigerenciamento.azure-api.net/reset-password
 
-````json
+```json
     {
       "email": "user@example.com",
       "password": "string",
