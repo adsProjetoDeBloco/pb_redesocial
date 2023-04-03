@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using static PB.IdentityAPI.Models.UserViewModels;
 using Microsoft.EntityFrameworkCore;
+using Azure.Core;
 
 namespace PB.IdentityAPI.Controllers
 {
@@ -59,8 +60,8 @@ namespace PB.IdentityAPI.Controllers
 
         }
 
-        [HttpPost("reset-password-token")]
-        public async Task<ActionResult> ResetPasswordRequestAsync(UserResetPasswordToken resetToken)
+        [HttpPost("/reset-password-token")]
+        public async Task<ActionResult> ResetPasswordTokenRequestAsync(UserResetPasswordToken resetToken)
         {
             var identityUser = await _singInManager.UserManager.Users.FirstOrDefaultAsync(u => u.NormalizedEmail == resetToken.Email.ToUpper());
 
@@ -73,6 +74,23 @@ namespace PB.IdentityAPI.Controllers
             return BadRequest();
 
         }
+        [HttpPost("/reset-password")]
+        public async Task<ActionResult> ResetPasswordAsync(UserResetPassword resetUserPassword)
+        {
+            var identityUser = await _singInManager.UserManager.Users.FirstOrDefaultAsync(u => u.NormalizedEmail == resetUserPassword.Email.ToUpper());
+
+            if (identityUser == null)
+            {
+                return Unauthorized();
+            }
+
+            var result = await _userManager.ResetPasswordAsync(identityUser, resetUserPassword.Token, resetUserPassword.Password);
+
+
+            return Ok();
+
+        }
+
 
         [HttpGet("GetUsers")]
         public async Task<ActionResult> GetUsers()

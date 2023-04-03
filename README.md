@@ -4,12 +4,44 @@
 
 #### SingUp:
 https://pbidentityapigerenciamento.azure-api.net/Auth/singup
+Corpo da Requisição:
+```json
+{
+  "email": "string",
+  "password": "string",
+  "rePassword": "string"
+}
+```
 
 #### login:
 https://pbidentityapigerenciamento.azure-api.net/Auth/login
+```json
+{
+  "email": "string",
+  "password": "string",
+}
+```
 
 ### Reset Password:
+Este deve ser feito em 2 passos, primeiro devemos obter o token passando o email
+
 https://pbidentityapigerenciamento.azure-api.net/Auth/reset-password-token
+```json
+{
+  "email": "string",
+}
+```
+Isto ira nós retornar StatusCode 200 com a string que será o Token, apos pegar esse token você vai passar ele você deve realizar uma nova requisição passando email, senha nova, confirmação e o token de reset:
+https://pbidentityapigerenciamento.azure-api.net/reset-password
+
+````json
+    {
+      "email": "user@example.com",
+      "password": "string",
+      "rePassword": "string",
+      "token": "string"
+    }
+```
 
 ---
 
