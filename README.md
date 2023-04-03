@@ -4,6 +4,7 @@
 
 #### SingUp:
 https://pbidentityapigerenciamento.azure-api.net/Auth/singup
+
 Corpo da Requisição:
 ```json
 {
@@ -31,7 +32,9 @@ https://pbidentityapigerenciamento.azure-api.net/Auth/reset-password-token
   "email": "string",
 }
 ```
+
 Isto ira nós retornar StatusCode 200 com a string que será o Token, apos pegar esse token você vai passar ele você deve realizar uma nova requisição passando email, senha nova, confirmação e o token de reset:
+
 https://pbidentityapigerenciamento.azure-api.net/reset-password
 
 ```json
@@ -49,8 +52,9 @@ https://pbidentityapigerenciamento.azure-api.net/reset-password
 
 
 ### Usuario
-* Create User:
-https://socialmediaapiapipb.azure-api.net/User/adduser
+* Create User: https://socialmediaapiapipb.azure-api.net/User/adduser
+
+
 Corpo da Requisição:
 ```json
 {
@@ -61,8 +65,7 @@ Corpo da Requisição:
 ```
 
 
-* Get User By Id:
-https://socialmediaapiapipb.azure-api.net/User/getuserbyid/{id}
+* Get User By Id: https://socialmediaapiapipb.azure-api.net/User/getuserbyid/{id}
 
 Retorno da Requisição:
 ```json
@@ -88,8 +91,7 @@ Retorno da Requisição:
 ```
 
 
-* Get All Users:
-https://socialmediaapiapipb.azure-api.net/User/getallusers
+* Get All Users: https://socialmediaapiapipb.azure-api.net/User/getallusers
 
 
 Retorno da Requisição:
@@ -144,19 +146,17 @@ Retorno da Requisição:
 ]
 ```
 
+* Delete User: https://socialmediaapiapipb.azure-api.net/User/deleteuser/{id}
 
-* Delete User:
-https://socialmediaapiapipb.azure-api.net/User/deleteuser/{id}
-
+<b>Retorna Status 204 (No Content)</b>
+<br/>
 
 ---
 
 
 ### Comentarios:
 
-
-* Create Comment: 
-https://socialmediaapiapipb.azure-api.net/Comment/creatcomment
+* Create Comment: https://socialmediaapiapipb.azure-api.net/Comment/creatcomment
 
 Corpo da requisição:
 ```json
@@ -168,16 +168,11 @@ Corpo da requisição:
 ```
 
 
-* Delete Comment: 
-  
-https://socialmediaapiapipb.azure-api.net/Comment/deletecomment/{commentId}
+* Delete Comment: https://socialmediaapiapipb.azure-api.net/Comment/deletecomment/{commentId}
 
 <b>Retorna Status 204 (No Content)</b>
 
-
-* Get Comment By Id: 
-
-https://socialmediaapiapipb.azure-api.net/Comment/getcommentbyid/{commentId}
+* Get Comment By Id: https://socialmediaapiapipb.azure-api.net/Comment/getcommentbyid/{commentId}
 
 Retorno da Requisição:
 ```json
@@ -192,9 +187,7 @@ Retorno da Requisição:
 ---
 
 ### Games:
-* Create Game: 
-
-https://socialmediaapiapipb.azure-api.net/Game/creategame
+* Create Game: https://socialmediaapiapipb.azure-api.net/Game/creategame
 
 Corpo da Requisição:
 ```json
@@ -207,9 +200,8 @@ Corpo da Requisição:
 ```
 <br/>
 
-* Delete Game: 
+* Delete Game: https://socialmediaapiapipb.azure-api.net/Game/deletegame/{id}
 
-https://socialmediaapiapipb.azure-api.net/Game/deletegame/{id}
 Corpo da Requisição:
 
 <b>Retorna Status 204 (No Content)</b>
@@ -229,9 +221,7 @@ Retorno da Requisição:
 ]
 ```
 
-
-* Get Game By Id: 
-https://socialmediaapiapipb.azure-api.net/Game/getgamebyid/{id}
+* Get Game By Id: https://socialmediaapiapipb.azure-api.net/Game/getgamebyid/{id}
 
 Retorno da Requisição:
 ```json
@@ -247,7 +237,6 @@ Retorno da Requisição:
 
 * Update Game: https://socialmediaapiapipb.azure-api.net/Game/updategame
 
-
 Corpo da Requisição:
 ```json
 {
@@ -261,6 +250,7 @@ Corpo da Requisição:
 
 ### Post:
 * Create Post: https://socialmediaapiapipb.azure-api.net/Post/creatpost
+
 Retorno da Requisição:
 ```json
 {
@@ -311,6 +301,8 @@ Retorno da Requisição:
 
 
 * Get Post By Id: https://socialmediaapiapipb.azure-api.net/Post/getpostbyid/{id}
+
+Retorno da Requisição
 ```json
 {
   "id": 1,
@@ -330,58 +322,3 @@ Retorno da Requisição:
 }
 
 ```
-
-
----
-
-
-
-
-## Relações de dados
-
-### Entidades:
-
-1 - User:
-* Id
-* Nome
-* Biografia
-* Email
-* Uma lista de jogos
-* Uma lista de Seguidores
-* Uma Lista de Grupos
-
-2 - Follower:
-* Id
-* Lista de Usuarios
-
-3 - Group:
-* Id
-* Nome do Grupo
-* Descriçao
-* Membro
-* Data da Criação
-
-4 - Game:
-* Id
-* Nome do Jogo
-* Categoria
-* Descrio
-
-5 - Post:
-* Id
-* Titulo
-* Texto
-* Nome do usuarios que postou
-* Lista de Comentarios
-
-6 - Comments:
-* Id
-* Mensagen
-* Nome do usuario que publicou
-* data da postagem
-
----
-
-## Relações concluidas:
-
-Todos os dados foram relacionados.
