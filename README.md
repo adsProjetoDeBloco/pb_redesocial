@@ -90,6 +90,33 @@ Retorno da Requisição:
 }
 ```
 
+* Get User By Email: https://socialmediaapiapipb.azure-api.net/User/getuserbyemail/{email}
+
+Deve ser passado um email para recuperar o usuario
+
+Retorno da Requisição:
+```json
+{
+  "id": 1,
+  "name": "Teste",
+  "email": "email@teste",
+  "bio": "minha bio",
+  "games": [],
+  "followers": [],
+  "following": [],
+  "posts": [
+    {
+      "id": 2,
+      "title": "Post 2",
+      "postText": "Texto do Post 2",
+      "userId": 1,
+      "comments": [],
+      "createdAt": "2023-04-03T01:25:37.8405257"
+    }
+  ]
+}
+```
+
 
 * Get All Users: https://socialmediaapiapipb.azure-api.net/User/getallusers
 

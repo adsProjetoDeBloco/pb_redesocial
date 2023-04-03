@@ -67,6 +67,14 @@ namespace PB.Application.Service
 
             return mapUser;
         }
+
+        public async Task<ReadUserDto> GetUserByEmail(string email)
+        {
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+            var mapUser = _mapper.Map<ReadUserDto>(user);
+
+            return mapUser;
+        }
     }
 }
 

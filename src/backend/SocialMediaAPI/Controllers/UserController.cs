@@ -55,6 +55,13 @@ namespace SocialMediaAPI.Controllers
 
             return Ok(user);
         }
+        [HttpGet("getuserbyemail/{email}")]
+        public async Task<IActionResult> GetUserByEmail(string email)
+        {
+            var user = await _userService.GetUserByEmail(email);
+
+            return Ok(user);
+        }
         [HttpDelete("deleteuser/{id}")]
         public async Task<IActionResult> DelteUser(int id)
         {

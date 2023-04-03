@@ -16,5 +16,6 @@ namespace PB.Application.Service.Interfaces
         Task<ICollection<ReadUserDto>> GetAllUsers();
         Task AddGameToUser(int gameId, int userId);
         Task<ReadUserDto> GetUserById(int id);
+        Task<ReadUserDto> GetUserByEmail(string email);
     }
 }
