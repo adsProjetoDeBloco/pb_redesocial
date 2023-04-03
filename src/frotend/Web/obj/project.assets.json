@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\clone\\pb_redesocial\\src\\frotend\\Web\\Web.csproj",
+      "projectUniqueName": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\clone (USAR ESSE)\\pb_redesocial\\src\\frotend\\Web\\Web.csproj",
       "projectName": "Web",
-      "projectPath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\clone\\pb_redesocial\\src\\frotend\\Web\\Web.csproj",
+      "projectPath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\clone (USAR ESSE)\\pb_redesocial\\src\\frotend\\Web\\Web.csproj",
       "packagesPath": "C:\\Users\\pedro\\.nuget\\packages\\",
-      "outputPath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\clone\\pb_redesocial\\src\\frotend\\Web\\obj\\",
+      "outputPath": "D:\\Programming\\INFNET\\DOTNET\\PB_RedeSocial\\clone (USAR ESSE)\\pb_redesocial\\src\\frotend\\Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",

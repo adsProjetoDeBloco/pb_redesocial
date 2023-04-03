@@ -23,14 +23,14 @@ namespace SocialMediaAPI.Controllers
             return CreatedAtAction(nameof(GetGameByIdAsync), new { game.Id }, game);
         }
 
-        [HttpGet("getAllGames")]
+        [HttpGet("getallgames")]
         public async Task<IActionResult> GetAllGamesAsync()
         {
             var gameList = await _gameService.GetAllGameAsync();
 
             return Ok(gameList);
         }
-        [HttpGet("getGameById")]
+        [HttpGet("getgamebyid/{id}")]
         public async Task<IActionResult> GetGameByIdAsync(int id)
         {
             var selectedGame = await _gameService.GetGameById(id);
@@ -38,7 +38,7 @@ namespace SocialMediaAPI.Controllers
             return Ok(selectedGame);
         }
 
-        [HttpPatch("updateGame")]
+        [HttpPatch("updategame")]
         public async Task<IActionResult> UpdateGameAsync(Game game)
         {
             await _gameService.UpdateGameAsync(game);
@@ -46,7 +46,7 @@ namespace SocialMediaAPI.Controllers
             return Ok(game);
         }
 
-        [HttpDelete("deleteGame/{id}")]
+        [HttpDelete("deletegame/{id}")]
         public async Task<IActionResult> DeleteGame(int id)
         {
             await _gameService.DeleteGameAsync(id);

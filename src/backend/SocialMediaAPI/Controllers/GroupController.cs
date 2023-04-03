@@ -21,35 +21,35 @@ namespace SocialMediaAPI.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost("creategroup")]
         public async Task<IActionResult> CreateGroup(Group group)
         {
             await _groupService.CreateGroup(group);
 
             return CreatedAtAction(nameof(GetGroupById), new { group.Id }, group) ;
         }
-        [HttpGet("get-group-by-id/{id}")]
+        [HttpGet("getgroupbyid/{id}")]
         public async Task<IActionResult> GetGroupById(int id)
         {
             var group = await _groupService.GetGroupById(id);
 
             return Ok(group);
         }
-        [HttpPost("add-user-to-group/{userId}/{groupId}")]
+        [HttpPost("addusertogroup/{userId}/{groupId}")]
         public async Task<IActionResult> AddUserToGroup(int userId, int groupId)
         {
             await _groupService.AddUserToGroup(userId, groupId);
 
             return Ok("Success");
         }
-        [HttpGet("get-all-groups")]
+        [HttpGet("getallgroups")]
         public async Task<IActionResult> GetAllGroups()
         {
             var groups = await _groupService.GetAllGroup();
 
             return Ok(groups);
         }
-        [HttpDelete("delete-group/{id}")]
+        [HttpDelete("deletegroup/{id}")]
         public async Task<IActionResult> DeleteGroup(int id)
         {
             await _groupService.DeleteGroup(id);

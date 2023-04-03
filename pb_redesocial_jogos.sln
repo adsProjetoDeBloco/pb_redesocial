@@ -11,14 +11,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PB.IdentityAPI", "src\backe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Web", "src\frotend\Web\Web.csproj", "{D8681EB7-B4F4-455A-935A-461BC002A1D6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{19060507-205D-4792-827F-BD98EF563010}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "intens_de_solucao", "intens_de_solucao", "{19060507-205D-4792-827F-BD98EF563010}"
 	ProjectSection(SolutionItems) = preProject
 		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SocialMediaAPI", "src\backend\SocialMediaAPI\SocialMediaAPI.csproj", "{C9289F3D-DF3F-4D5F-954F-06855EB298C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PB.Application", "src\backend\PB.Application\PB.Application.csproj", "{60BA3796-9D54-455A-8920-F880C2E5D3FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PB.Application", "src\backend\PB.Application\PB.Application.csproj", "{60BA3796-9D54-455A-8920-F880C2E5D3FA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

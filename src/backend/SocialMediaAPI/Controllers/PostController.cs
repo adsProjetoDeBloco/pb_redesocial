@@ -15,7 +15,7 @@ namespace SocialMediaAPI.Controllers
             _postService = postService;
         }
 
-        [HttpPost("creat-post")]
+        [HttpPost("creatpost")]
         public async Task<IActionResult> CreatPost(CreatPostDto creatDto)
         {
 
@@ -23,7 +23,7 @@ namespace SocialMediaAPI.Controllers
 
             return CreatedAtAction(nameof(GetPostById), new { creatDto.Id }, creatDto);
         }
-        [HttpGet("get-post-by-id/{id}")]
+        [HttpGet("getpostbyid/{id}")]
         public async Task<IActionResult> GetPostById(int postId)
         {
 
@@ -36,7 +36,7 @@ namespace SocialMediaAPI.Controllers
 
             return Ok(post);
         }
-        [HttpGet("get-all-posts")]
+        [HttpGet("getallposts")]
         public async Task<IActionResult> GetAllPosts()
         {
 
@@ -48,7 +48,7 @@ namespace SocialMediaAPI.Controllers
             return Ok(posts);
         }
 
-        [HttpDelete("delete-post/{id}")]
+        [HttpDelete("deletepost/{id}")]
         public async Task<IActionResult> DeletePost(int id)
         {
 

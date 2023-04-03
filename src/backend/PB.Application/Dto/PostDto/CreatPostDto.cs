@@ -12,6 +12,5 @@ namespace PB.Application.Dto.PostDto
         public string? Title { get; set; }
         public string? PostText { get; set; }
         public int UserId { get; set; }
-        public DateTime CreatedAt { get; set; }
     }
 }

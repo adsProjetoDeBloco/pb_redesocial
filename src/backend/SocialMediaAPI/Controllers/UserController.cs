@@ -15,7 +15,7 @@ namespace SocialMediaAPI.Controllers
             _userService = userService;
         }
 
-        [HttpPost("add-user")]
+        [HttpPost("adduser")]
         public async Task<IActionResult> AddUser(User User)
         {
             await _userService.AddUser(User);
@@ -23,7 +23,7 @@ namespace SocialMediaAPI.Controllers
             return CreatedAtAction(nameof(GetUserById), new { Id = User.Id }, User);
         }
 
-        [HttpPost("add-game-to-user/{gameId}/{userId}")]
+        [HttpPost("addgametouser/{gameId}/{userId}")]
         public async Task<IActionResult> AddGameToUser(int gameId, int userId)
         {
 
@@ -32,7 +32,7 @@ namespace SocialMediaAPI.Controllers
             return Ok();
         }
 
-        [HttpPost("add-follower")]
+        [HttpPost("addfollower")]
         public async Task<IActionResult> AddFollowerToUser(int userId, int followerId)
         {
             await _userService.AddFollowerToUser(followerId, userId);
@@ -40,7 +40,7 @@ namespace SocialMediaAPI.Controllers
             return Ok();
         }
 
-        [HttpGet("get-all-users")]
+        [HttpGet("getallusers")]
         public async Task<IActionResult> GetAllUsers()
         {
             var users = await _userService.GetAllUsers();
@@ -48,14 +48,14 @@ namespace SocialMediaAPI.Controllers
             return Ok(users);
         }        
         
-        [HttpGet("get-user-by-id/{id}")]
+        [HttpGet("getuserbyid/{id}")]
         public async Task<IActionResult> GetUserById(int id)
         {
             var user = await _userService.GetUserById(id);
 
             return Ok(user);
         }
-        [HttpDelete("delete-user/{id}")]
+        [HttpDelete("deleteuser/{id}")]
         public async Task<IActionResult> DelteUser(int id)
         {
             await _userService.DeleteUser(id);

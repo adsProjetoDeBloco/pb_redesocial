@@ -12,17 +12,18 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("pb_redesocial", new OpenApiInfo
+    c.SwaggerDoc("v1", new OpenApiInfo
     {
-        Title = "API PB Rede Social",
+        Title = "api_pb_rede_social",
         Description = "API De rede social, para acesso ao DB onde ocorre todas as inserções relativas a Rede Social",
-        License = new OpenApiLicense() { Name = "MIT", Url = new Uri("https://opensource.org/license/mit/") }
+        License = new OpenApiLicense() { Name = "MIT", Url = new Uri("https://opensource.org/license/mit/") }, Version = "v1"
     });
 });
 
 
 DependencyInjection.Inject(builder.Services, builder.Configuration);
 
+builder.Services.AddCors();
 
 builder.Services.AddMvc(opts => opts.SuppressAsyncSuffixInActionNames = false);
 
@@ -34,9 +35,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/pb_redesocial/swagger.json", "pb_redesocial");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
     });
 }
+
+
+app.UseCors(opts =>
+{
+    opts.AllowAnyMethod();
+    opts.AllowAnyOrigin();
+    opts.AllowAnyHeader();
+});
 
 app.UseHttpsRedirection();
 

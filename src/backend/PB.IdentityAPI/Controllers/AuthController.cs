@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace PB.IdentityAPI.Controllers
 {
+    [ApiController]
     [Route("[controller]")]
     public class AuthController : Controller
     {
@@ -73,7 +74,19 @@ namespace PB.IdentityAPI.Controllers
 
         }
 
-       
+        [HttpGet("GetUsers")]
+        public async Task<ActionResult> GetUsers()
+        {
+            var users = _singInManager.UserManager.Users.ToList();
+
+            List<string> userNames = new List<string>();
+            foreach(var person in users)
+            {
+                userNames.Add(person.UserName);
+            }
+
+            return Ok(userNames);
+        }
 
         private async Task<UserResponseLogin> GenerateJwt(string email)
         {

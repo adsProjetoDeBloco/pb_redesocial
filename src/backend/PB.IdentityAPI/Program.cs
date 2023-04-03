@@ -21,17 +21,22 @@ builder.Services.AddEndpointsApiExplorer();
 var appSettingSection = builder.Configuration.GetSection("AppSettings");
 builder.Services.Configure<AppSettings>(appSettingSection);
 
+
 var appSettings = appSettingSection.Get<AppSettings>();
+if (appSettings == null)
+{
+    appSettings = new AppSettings() { Secret = "0asdjas09djsa09djasdjsadajsd09asjd09sajcnzxn" };
+}
 var key = Encoding.ASCII.GetBytes(appSettings.Secret);
 
 //swagger
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("identity_v1", new OpenApiInfo
+    c.SwaggerDoc("v1", new OpenApiInfo
     {
         Title = "Identity API PB Rede Social",
         Description = "API de cadastro de usuario para o Projeto de Bloco .NET",
-        License = new OpenApiLicense() { Name = "MIT", Url = new Uri("https://opensource.org/license/mit/") }
+        License = new OpenApiLicense() { Name = "MIT", Url = new Uri("https://opensource.org/license/mit/") }, Version = "v1"
     });
 } );
 
@@ -73,6 +78,18 @@ builder.Services.AddAuthentication(opt =>
 builder.Services.AddScoped<TokenService, TokenService>();
 
 
+//CORS
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(
+        policy =>
+        {
+            policy.AllowAnyOrigin();
+           
+        });
+});
+
+
 //-----------------------------------------------------------------------------
 
 var app = builder.Build();
@@ -83,9 +100,19 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/identity_v1/swagger.json", "identity_v1");
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
     });
 }
+
+
+
+app.UseCors(opts =>
+{
+    opts.AllowAnyOrigin();
+    opts.AllowAnyMethod();
+    opts.AllowAnyOrigin();
+    opts.AllowAnyHeader();
+});
 
 
 app.UseHttpsRedirection();

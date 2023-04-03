@@ -22,7 +22,7 @@ namespace PB.Application.Service
         public async Task CreateCommentAsync(CreateCommentDto createDto)
         {
             var comment = _mapper.Map<Comment>(createDto);
-
+            comment.PostedAt = DateTime.UtcNow;
             await _context.Comments.AddAsync(comment);
             await _context.SaveChangesAsync();
         }
