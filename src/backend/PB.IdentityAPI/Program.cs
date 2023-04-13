@@ -110,7 +110,6 @@ app.UseCors(opts =>
 {
     opts.AllowAnyOrigin();
     opts.AllowAnyMethod();
-    opts.AllowAnyOrigin();
     opts.AllowAnyHeader();
 });
 

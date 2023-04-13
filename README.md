@@ -288,7 +288,7 @@ Retorno da Requisição:
 ```
 
 
-* Delete Post: https://socialmediaapiapipb.azure-api.net/Post/deletepost/{id}
+* Delete Post: https://socialmediaapi20230406163142.azurewebsites.net/Post/deletepost/{postId}/{userId}
   
 <b>Retorna Status 204 (No Content)</b>
 <br/>

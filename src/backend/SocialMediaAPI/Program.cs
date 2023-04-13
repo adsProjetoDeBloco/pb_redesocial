@@ -23,7 +23,16 @@ builder.Services.AddSwaggerGen(c =>
 
 DependencyInjection.Inject(builder.Services, builder.Configuration);
 
-builder.Services.AddCors();
+//CORS
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(
+        policy =>
+        {
+            policy.AllowAnyOrigin();
+
+        });
+});
 
 builder.Services.AddMvc(opts => opts.SuppressAsyncSuffixInActionNames = false);
 

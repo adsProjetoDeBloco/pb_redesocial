@@ -16,14 +16,14 @@ namespace SocialMediaAPI.Controllers
         }
 
         [HttpPost("creatpost")]
-        public async Task<IActionResult> CreatPost(CreatPostDto creatDto)
+        public async Task<IActionResult> CreatPost(CreatPostDto createDto)
         {
 
-            await _postService.CreatePostAsync(creatDto);
+            await _postService.CreatePostAsync(createDto);
 
-            return CreatedAtAction(nameof(GetPostById), new { creatDto.Id }, creatDto);
+            return Ok(createDto);
         }
-        [HttpGet("getpostbyid/{id}")]
+        [HttpGet("getpostbyid/{postId}")]
         public async Task<IActionResult> GetPostById(int postId)
         {
 
@@ -48,11 +48,11 @@ namespace SocialMediaAPI.Controllers
             return Ok(posts);
         }
 
-        [HttpDelete("deletepost/{id}")]
-        public async Task<IActionResult> DeletePost(int id)
+        [HttpDelete("deletepost/{postId}/{userId}")]
+        public async Task<IActionResult> DeletePost(int postId, int userId)
         {
 
-            await _postService.DeletePostAsync(id);
+            await _postService.DeletePostAsync(postId, userId);
 
             return NoContent();
         }

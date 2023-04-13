@@ -2,7 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
-    <NameOfLastUsedPublishProfile>D:\Programming\INFNET\DOTNET\PB_RedeSocial\clone %28USAR ESSE%29\pb_redesocial\src\backend\PB.IdentityAPI\Properties\PublishProfiles\PBIdentityAPI20230331152237 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>D:\Programming\INFNET\DOTNET\PB_RedeSocial\clone %28USAR ESSE%29\pb_redesocial\src\backend\PB.IdentityAPI\Properties\PublishProfiles\PBIdentityAPI - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

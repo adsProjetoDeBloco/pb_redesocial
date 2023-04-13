@@ -4,7 +4,7 @@
     <ActiveDebugProfile>IIS Express</ActiveDebugProfile>
     <Controller_SelectedScaffolderID>MvcControllerEmptyScaffolder</Controller_SelectedScaffolderID>
     <Controller_SelectedScaffolderCategoryPath>root/Common/MVC/Controller</Controller_SelectedScaffolderCategoryPath>
-    <NameOfLastUsedPublishProfile>D:\Programming\INFNET\DOTNET\PB_RedeSocial\clone %28USAR ESSE%29\pb_redesocial\src\backend\SocialMediaAPI\Properties\PublishProfiles\SocialMediaAPI20230330220347 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>D:\Programming\INFNET\DOTNET\PB_RedeSocial\clone %28USAR ESSE%29\pb_redesocial\src\backend\SocialMediaAPI\Properties\PublishProfiles\SocialMediaAPI20230406163142 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebuggerFlavor>ProjectDebugger</DebuggerFlavor>

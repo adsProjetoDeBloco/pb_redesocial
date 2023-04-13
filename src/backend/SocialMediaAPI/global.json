@@ -2,6 +2,9 @@
   "sdk": {
     "version": "net7.0",
     "rollForward": "latestPatch"
+  },
+  "Host": {
+    "CORS": "*"
   }
 }
 

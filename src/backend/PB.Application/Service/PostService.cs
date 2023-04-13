@@ -21,9 +21,11 @@ namespace PB.Application.Service
         public async Task CreatePostAsync(CreatPostDto postDto)
         {
             var post = _mapper.Map<Post>(postDto);
+
             post.CreatedAt = DateTime.UtcNow;
 
             await _context.Posts.AddAsync(post);
+
             await _context.SaveChangesAsync();
         }
 
@@ -42,15 +44,24 @@ namespace PB.Application.Service
 
             return readDto;
         }
-        public async Task DeletePostAsync(int postId)
+        public async Task DeletePostAsync(int postId, int userId)
         {
             var deletedPost = await _context.Posts.FirstOrDefaultAsync(p => p.Id == postId);
             if (deletedPost == null)
             {
                 throw new Exception($"{postId} não existe");
             }
-            _context.Posts.Remove(deletedPost);
-            await _context.SaveChangesAsync();
+            if(deletedPost.UserId == userId)
+            {
+                _context.Posts.Remove(deletedPost);
+                await _context.SaveChangesAsync();
+            }
+            else
+            {
+                throw new Exception($"Usuario: {userId} não confere com o post");
+            }
+
+            
         }
     }
 }

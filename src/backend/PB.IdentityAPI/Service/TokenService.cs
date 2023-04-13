@@ -35,7 +35,6 @@ namespace PB.IdentityAPI.Service
             {
                 claims.Add(new Claim("role", userRole));
             }
-
             var identityClaims = new ClaimsIdentity();
             identityClaims.AddClaims(claims);
 
